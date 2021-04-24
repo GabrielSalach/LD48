@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 81388492}
   - component: {fileID: 81388490}
   - component: {fileID: 81388496}
-  - component: {fileID: 81388493}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -393,21 +392,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &81388493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81388486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c13b6468b252cf4989d26919b7ea103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: {fileID: 0}
-  deathScreen: {fileID: 0}
-  isDead: 0
 --- !u!114 &81388496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,7 +606,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252701307}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -6303,6 +6287,7 @@ GameObject:
   - component: {fileID: 1126321535}
   - component: {fileID: 1126321537}
   - component: {fileID: 1126321536}
+  - component: {fileID: 1126321538}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Ennemy_HitBox
@@ -6362,6 +6347,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.25}
   m_EdgeRadius: 0
+--- !u!114 &1126321538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126321534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c13b6468b252cf4989d26919b7ea103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: {fileID: 0}
+  deathScreen: {fileID: 0}
+  isDead: 0
 --- !u!1 &1168174271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,7 +6581,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_TargetDisplay: 1
+  m_TargetDisplay: 2
 --- !u!224 &1260867809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6630,7 +6630,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287110229}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7111,7 +7111,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701809690}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7229,6 +7229,7 @@ GameObject:
   - component: {fileID: 1732164589}
   - component: {fileID: 1732164591}
   - component: {fileID: 1732164590}
+  - component: {fileID: 1732164592}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Ennemy_HitBox
@@ -7288,6 +7289,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.25}
   m_EdgeRadius: 0
+--- !u!114 &1732164592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732164588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c13b6468b252cf4989d26919b7ea103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: {fileID: 0}
+  deathScreen: {fileID: 0}
+  isDead: 0
 --- !u!1 &1836771273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7469,6 +7485,7 @@ GameObject:
   - component: {fileID: 2012631914}
   - component: {fileID: 2012631915}
   - component: {fileID: 2012631916}
+  - component: {fileID: 2012631917}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Ennemy_HitBox
@@ -7528,6 +7545,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91ccbd7ebadb4734b67434e85fd4ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2012631917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012631913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c13b6468b252cf4989d26919b7ea103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: {fileID: 0}
+  deathScreen: {fileID: 0}
+  isDead: 0
 --- !u!1 &2029559970
 GameObject:
   m_ObjectHideFlags: 3
