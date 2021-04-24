@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
+    GameObject winText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        winText = GameObject.Find("Win");
 
     }
 
@@ -21,7 +24,7 @@ public class WinCondition : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
 
     	if(other.tag == "Character") {
-    		Debug.Log("Nice job, fellow cuck !");
+            winText.GetComponent<Text>().enabled = true;
     	}
 
     }
