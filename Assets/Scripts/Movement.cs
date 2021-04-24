@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
-        speed = 5;
+        speed = 1;
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour {
         // Récupération des touches de déplacement
         if(Input.GetKey(KeyCode.DownArrow)) {
             
-            velocityVector.y = - speed;
+            velocityVector.y = -speed;
         
         }
         else if(Input.GetKey(KeyCode.UpArrow)) {

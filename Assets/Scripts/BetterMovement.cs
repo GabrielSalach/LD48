@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player2 : MonoBehaviour
+public class BetterMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] int speed = 50;
