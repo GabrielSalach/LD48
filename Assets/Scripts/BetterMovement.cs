@@ -38,7 +38,7 @@ public class BetterMovement : MonoBehaviour
         // light.pointLightOuterRadius -= delta.y / 15;
 
 
-        light.pointLightOuterRadius = (transform.position.y - 25) / 10;
+        light.pointLightOuterRadius = (transform.position.y) / 10;
         light.pointLightInnerRadius = light.pointLightOuterRadius - 2;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)){
