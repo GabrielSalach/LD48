@@ -8,6 +8,8 @@ TagManager:
   - Character
   - Character_SafeBox
   - Character_HitBox
+  - Ennemy
+  - Ennemy_HitBox
   layers:
   - Default
   - TransparentFX
