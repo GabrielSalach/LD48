@@ -23,8 +23,9 @@ public class Breathing : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(particlePrefab, transform);
+            GameObject temp = Instantiate(particlePrefab, transform);
             yield return new WaitForSeconds(3f);
+            Destroy(temp);
         }
     }
 }
