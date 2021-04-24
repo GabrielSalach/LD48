@@ -11,6 +11,7 @@ public class BetterMovement : MonoBehaviour
     SpriteRenderer sr;
 
     Light2D characterLight;
+    DeathScreen deathScreen;
     // Vector3 currentPosition;
     // Vector3 lastPosition;
     // Vector3 delta;
@@ -20,6 +21,7 @@ public class BetterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        deathScreen = GetComponent<DeathScreen>();
 
         characterLight = GetComponent<Light2D>();
 
@@ -40,20 +42,25 @@ public class BetterMovement : MonoBehaviour
 
         characterLight.pointLightOuterRadius = (transform.position.y) / 10;
         characterLight.pointLightInnerRadius = characterLight.pointLightOuterRadius - 2;
+        if(deathScreen.isDead == false)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                rb.AddForce(-Vector3.right * speed);
+                sr.flipX = true;
+            }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)){
-            rb.AddForce(-Vector3.right * speed);
-            sr.flipX = true;
-        }
-            
-        else if (Input.GetKeyDown(KeyCode.RightArrow)){
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
                 rb.AddForce(Vector3.right * speed);
                 sr.flipX = false;
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+                rb.AddForce(Vector3.up * speed);
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+                rb.AddForce(-Vector3.up * speed);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            rb.AddForce(Vector3.up * speed);
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-            rb.AddForce(-Vector3.up * speed);
+        
         
         // lastPosition = transform.position;
 
