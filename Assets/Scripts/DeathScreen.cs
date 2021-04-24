@@ -33,9 +33,9 @@ public class DeathScreen : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Ennemy")
+        if(other.tag == "Character_HitBox")
         {
             isDead = true;
         }
