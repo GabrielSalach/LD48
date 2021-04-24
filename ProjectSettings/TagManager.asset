@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Character
+  - Character_SafeBox
+  - Character_HitBox
   layers:
   - Default
   - TransparentFX

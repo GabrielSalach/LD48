@@ -10,7 +10,7 @@ public class BetterMovement : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
 
-    Light2D light;
+    Light2D characterLight;
     // Vector3 currentPosition;
     // Vector3 lastPosition;
     // Vector3 delta;
@@ -21,7 +21,7 @@ public class BetterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
-        light = GetComponent<Light2D>();
+        characterLight = GetComponent<Light2D>();
 
         // lastPosition = transform.position;
         // delta = new Vector3(0,0,0);
@@ -38,8 +38,8 @@ public class BetterMovement : MonoBehaviour
         // light.pointLightOuterRadius -= delta.y / 15;
 
 
-        light.pointLightOuterRadius = (transform.position.y) / 10;
-        light.pointLightInnerRadius = light.pointLightOuterRadius - 2;
+        characterLight.pointLightOuterRadius = (transform.position.y) / 10;
+        characterLight.pointLightInnerRadius = characterLight.pointLightOuterRadius - 2;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)){
             rb.AddForce(-Vector3.right * speed);
