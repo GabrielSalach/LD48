@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadGame()
     {
-        SceneManager.LoadScene("Scenes/dev_gab");
+        SceneManager.LoadScene("Scenes/main");
     }
 
     public void LoadMenu()
@@ -19,4 +19,6 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    
 }
