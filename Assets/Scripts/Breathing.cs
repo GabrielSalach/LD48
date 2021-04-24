@@ -10,7 +10,6 @@ public class Breathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         StartCoroutine(Bubbles());
     }
 
@@ -24,8 +23,9 @@ public class Breathing : MonoBehaviour
     {
         while(true)
         {
-            Instantiate(particlePrefab, transform);
+            GameObject temp = Instantiate(particlePrefab, transform);
             yield return new WaitForSeconds(3f);
+            Destroy(temp);
         }
     }
 }
