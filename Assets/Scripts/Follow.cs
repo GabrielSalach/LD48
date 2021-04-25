@@ -10,6 +10,7 @@ public class Follow : MonoBehaviour
 	Vector3 characterPosition;
 	Rigidbody2D creature;
 	Vector2 velocityVector;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Follow : MonoBehaviour
     	character = GameObject.FindGameObjectWithTag("Character");
     	characterPosition = character.transform.position;
     	creature = gameObject.transform.parent.gameObject.GetComponent<Rigidbody2D>();
+        animator = transform.parent.GetComponent<Animator>();
     	velocityVector = new Vector2(0,0);
     	isFollowing = false;
 
@@ -38,6 +40,7 @@ public class Follow : MonoBehaviour
 
     	if(other.tag == "Character_HitBox") {
     		isFollowing = true;
+            animator.SetBool("IsAttacking", true);
     	}
 
     }
@@ -46,7 +49,8 @@ public class Follow : MonoBehaviour
 
     	if(other.tag == "Character_HitBox") {
     		isFollowing = false;
-    	}
+            animator.SetBool("IsAttacking", false);
+        }
 
     	creature.velocity = new Vector2(0,0);
 
